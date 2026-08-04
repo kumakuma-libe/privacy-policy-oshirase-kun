@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー - お知らせ君</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #333;
+      line-height: 1.8;
+    }
+    h1 { font-size: 24px; border-bottom: 2px solid #4285f4; padding-bottom: 10px; }
+    h2 { font-size: 18px; margin-top: 32px; color: #4285f4; }
+    h3 { font-size: 16px; margin-top: 20px; }
+    p, li { font-size: 15px; }
+    ul { padding-left: 20px; }
+    code { background: #f4f4f4; padding: 1px 5px; border-radius: 3px; font-size: 13px; }
+    .updated { color: #888; font-size: 13px; }
+    .note { background: #fff8dc; border-left: 4px solid #f4b400; padding: 10px 14px; margin: 16px 0; }
+    .contact { background: #e8f0fe; border-left: 4px solid #4285f4; padding: 10px 14px; margin: 16px 0; font-size: 14px; }
+    .purpose { background: #eef7ee; border-left: 4px solid #34a853; padding: 12px 14px; margin: 16px 0; }
+    .pledge { background: #e8f0fe; border-left: 4px solid #4285f4; padding: 10px 14px; margin: 16px 0; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 14px; }
+    th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background: #e8f0fe; }
+  </style>
+</head>
+<body>
+  <h1>プライバシーポリシー</h1>
+  <p class="updated">最終更新日: 2026年8月4日 ／ 対象バージョン: 3.5.0</p>
+
+  <p>本プライバシーポリシーは、Chrome拡張機能「<strong>お知らせ君</strong>」（以下「本拡張機能」）における
+  ユーザーデータの取り扱いについて説明します。</p>
+
+  <div class="note">
+    本拡張機能は、医療機関に所属する医師・医療事務職員等が、業務としてチャットや予約・受付の一覧を
+    利用する際の見落とし防止を目的とした拡張機能です。一般消費者向けの拡張機能ではありません。
+  </div>
+
+  <!-- 単一の目的 -->
+  <h2>1. 単一の目的（Single Purpose）</h2>
+  <div class="purpose">
+    <strong>本拡張機能の唯一の目的:</strong><br>
+    ユーザーがあらかじめ登録した言葉が、チャットの新着または予約・受付の一覧に現れたときに、
+    <strong>ユーザーが今見ているページ上に小さなお知らせを表示する</strong>ことです。
+    作業に集中している間に重要な連絡を見落とすことを防ぐ用途を想定しています。<br>
+    本拡張機能は、この目的以外の機能（広告表示・ユーザー追跡・SNS連携・第三者へのデータ販売・
+    AIによる要約や分析など）を一切持ちません。
+  </div>
+
+  <!-- 扱うデータ -->
+  <h2>2. 拡張機能が扱うデータ（収集する情報の種類）</h2>
+  <p>本拡張機能は、以下のデータを処理します。Chrome ウェブストアのデータ使用フォームで申告する
+  分類に合わせて開示します。<strong>いずれもユーザーの端末内で処理し、開発者を含む第三者へは
+  一切送信しません。</strong></p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Chrome ウェブストアの分類</th>
+        <th>本拡張機能における具体的内容</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>ウェブサイトのコンテンツ</strong></td>
+        <td>
+          ①ビジネスチャット（<code>https://chat.google.com/*</code>）の<strong>会話一覧に表示されている文字</strong>
+          （会話名・差出人名・本文の冒頭）。登録された言葉が含まれるかを調べるためだけに、
+          その場で照合して<strong>直ちに破棄</strong>します。<br>
+          ②診療予約・受付システム（<code>https://digikar.jp/*</code>、
+          <code>https://*.digikar-smart.jp/*</code>）の一覧表のうち、
+          <strong>「診療科」の欄と予約時刻の欄のみ</strong>。こちらも照合と件数の集計にのみ使用します。
+        </td>
+      </tr>
+      <tr>
+        <td><strong>個人を特定できる情報</strong></td>
+        <td>
+          ①<strong>患者番号</strong>：同じ予約を繰り返し知らせないための照合にのみ使用します。
+          <strong>そのままの値は保存せず</strong>、元に戻せない短い符号へ変換してから記録します。
+          お知らせにも表示しません。<br>
+          ②<strong>Chatwork のメッセージ本文・差出人名・チャット名</strong>：
+          ユーザーが Chatwork 連携を有効にした場合、自分あて／全員あてのメッセージを取得します。
+          保存するのは<strong>メッセージ番号のみ</strong>で、本文・氏名は保存しません。
+          お知らせに冒頭を表示するかどうかは、ユーザーが設定で選べます（第6章参照）。<br>
+          <strong>患者の氏名・生年月日・住所・電話番号・診療内容は、取得も保存も表示もしません。</strong>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>認証に関する情報</strong></td>
+        <td>ユーザーが任意で登録する Chatwork API トークン（Chatwork 社が発行）。
+        ユーザーの端末内（<code>chrome.storage.local</code>）にのみ保存されます。
+        チャット・予約システムのログイン情報（ID・パスワード・セッション）は取得しません
+        （ブラウザの標準的な認証 Cookie をそのまま利用するのみです）。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>本拡張機能は、以下のデータを <strong>収集しません</strong>:
+  氏名、生年月日、電話番号、住所、診療記録、位置情報、閲覧履歴、検索履歴、
+  金融情報・決済情報、生体情報（指紋・顔画像など）。</p>
+
+  <!-- データの保存 -->
+  <h2>3. データの保管場所と保持期間</h2>
+  <p>保存先はすべて<strong>ユーザーのブラウザ内</strong>（<code>chrome.storage.local</code> および
+  <code>chrome.storage.session</code>）です。開発者が運営するサーバーは存在しません。</p>
+  <ul>
+    <li><strong>チャット・予約一覧から読み取った文字</strong>：照合した瞬間に破棄します。保存しません。</li>
+    <li><strong>重複を防ぐための記録</strong>：会話の識別子と受信時刻、Chatwork のメッセージ番号、
+      患者番号を変換した符号。<strong>いずれもその日のうちだけ</strong>保持し、
+      <strong>日付が変わると自動的に消去</strong>されます。本文・氏名は含みません。</li>
+    <li><strong>設定値</strong>（登録した言葉、再通知までの分数、表示の可否、通知する時間帯など）：
+      ユーザーが変更または削除するまで保持されます。</li>
+    <li><strong>Chatwork API トークン</strong>：ユーザーが設定画面で登録した場合のみ保存されます。
+      設定画面の「削除」ボタンでいつでも消去できます。</li>
+    <li><strong>保持期間</strong>：上記いずれも、ユーザーが削除するか拡張機能をアンインストールするまで
+      端末内に保持されます。開発者側にはいかなるデータも保持されないため、
+      開発者側での保持期間の定めはありません。</li>
+  </ul>
+
+  <!-- 権限と用途 -->
+  <h2>4. 拡張機能が要求する権限と用途</h2>
+  <p>本拡張機能が <code>manifest.json</code> で要求する権限と、その用途は以下のとおりです。</p>
+  <table>
+    <thead>
+      <tr>
+        <th>権限</th>
+        <th>用途</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>storage</code></td>
+        <td>設定値と、重複を防ぐための記録をブラウザ内に保存するため。</td>
+      </tr>
+      <tr>
+        <td><code>alarms</code></td>
+        <td>確認がないときに一定時間後にもう一度知らせるため、および
+        監視状態を定期的に見直すため。</td>
+      </tr>
+      <tr>
+        <td><code>scripting</code></td>
+        <td>お知らせを表示する部品を、必要なページに読み込ませるため。
+        拡張機能を導入する前から開いていたタブには自動で入らないため、その補完にも使用します。</td>
+      </tr>
+      <tr>
+        <td>ホスト権限 <code>https://chat.google.com/*</code></td>
+        <td>会話一覧から新着を読み取り、監視用タブの状態を管理するため。</td>
+      </tr>
+      <tr>
+        <td>ホスト権限 <code>https://digikar.jp/*</code><br>
+        <code>https://*.digikar-smart.jp/*</code></td>
+        <td>予約・受付の一覧の「診療科」欄を監視し、お知らせを表示するため。</td>
+      </tr>
+      <tr>
+        <td>ホスト権限 <code>https://api.chatwork.com/*</code></td>
+        <td>ユーザーが Chatwork 連携を有効にした場合に、自分あて／全員あてのメッセージを取得するため。</td>
+      </tr>
+      <tr>
+        <td><strong>任意のホスト権限</strong> <code>&lt;all_urls&gt;</code></td>
+        <td><strong>既定では要求しません。</strong>ユーザーが設定画面のボタンを押して明示的に許可した場合にのみ、
+        上記以外のページにもお知らせを表示できるようになります。
+        許可しない場合は、予約・受付の画面にのみお知らせが表示されます。
+        許可はいつでも設定画面から取り消せます。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    <strong><code>&lt;all_urls&gt;</code> について。</strong>
+    この許可を与えても、本拡張機能が<strong>ページの内容を読み取ることはありません</strong>。
+    すべてのページに読み込まれるのは<strong>お知らせを表示するためだけの部品</strong>（<code>src/notify.js</code>）
+    であり、このファイルには<strong>ページを読み取る処理が一行も含まれていません</strong>。
+    表示は独立した領域（closed な Shadow DOM）の中で行われ、ページ側の内容にも見た目にも干渉しません。
+    この制約は、リポジトリの自動テストで機械的に検証されています。
+  </div>
+
+  <!-- 外部サービスへの送信 -->
+  <h2>5. 外部サービスへのデータ送信（第三者提供）</h2>
+  <p>本拡張機能は、<strong>開発者が運営するサーバーへのデータ送信を一切行いません</strong>。
+  外部への通信は、次の1つだけです。</p>
+
+  <h3>5-1. Chatwork API（<code>api.chatwork.com</code>）</h3>
+  <ul>
+    <li><strong>既定では通信しません。</strong>ユーザーが設定画面で Chatwork API トークンを登録し、
+      連携を有効にした場合にのみ動作します。</li>
+    <li><strong>通信の向き</strong>：本拡張機能から Chatwork へ<strong>取得を要求するだけ</strong>です。
+      メッセージの送信・投稿・既読化などの書き込み操作は行いません。</li>
+    <li><strong>送信内容</strong>：認証のための API トークンのみ。トークンは常に HTTP ヘッダーで送信し、
+      URL には含めません。通信は HTTPS で暗号化されます。</li>
+    <li><strong>送信先はユーザー自身が契約する Chatwork です。</strong>
+      取得したメッセージは端末内で処理され、他のどこへも転送されません。</li>
+    <li>Chatwork におけるデータの取り扱いは、Chatwork 株式会社のプライバシーポリシーに従います。</li>
+  </ul>
+
+  <p>本拡張機能は、上記以外の第三者（広告事業者・分析事業者・AIサービス等）への
+  データ提供・販売・貸与を一切行いません。
+  <strong>生成AIへの送信は、いかなる設定でも行いません。</strong>
+  外部 CDN・外部フォント・アクセス解析・エラー収集サービスも使用しておらず、
+  必要なコードはすべて拡張機能内に同梱しています。</p>
+
+  <!-- 患者情報の最小化 -->
+  <h2>6. 患者情報の取り扱いに関する追加の配慮（医療系拡張機能）</h2>
+  <p>本拡張機能のお知らせは、<strong>診察中の画面にも表示されます</strong>。
+  患者の目に触れる可能性を前提として、次の配慮を組み込んでいます。</p>
+  <ul>
+    <li><strong>チャットの内容は、どの設定でも表示しません。</strong>
+      ビジネスチャットについては、本文・差出人名・会話名を<strong>一切表示しません</strong>。
+      表示するのは「新着があります」という文言と、ユーザー自身が登録した言葉だけです。</li>
+    <li><strong>予約のお知らせは件数と時刻のみ。</strong>
+      氏名・患者番号・受付メモは表示しません。</li>
+    <li><strong>Chatwork のチャット名・本文の冒頭は、表示するかどうかを選べます。</strong>
+      これらには患者の氏名が含まれる可能性があるため、設定画面でその旨を明示し、
+      オフにすると種別（個人あて／全員あて）のみの表示に切り替わります。
+      表示する場合の文字数もユーザーが指定できます。</li>
+    <li><strong>患者番号は元に戻せない符号へ変換</strong>してから記録し、当日中に破棄します。</li>
+    <li><strong>ログの禁止</strong>：患者由来の情報・メッセージ本文・API トークンのいずれも、
+      コンソールログやエラーメッセージへ出力しません。これはリポジトリの自動テストで機械的に検証しています。</li>
+    <li><strong>想定利用者</strong>：医療機関に所属する医師・医療事務職員等、
+      対象システムの利用権限を持つスタッフによる業務利用を想定しています。</li>
+  </ul>
+
+  <!-- データ使用の誓約 -->
+  <h2>7. データの使用に関する誓約（Chrome ウェブストア開示事項）</h2>
+  <div class="pledge">
+    <ol>
+      <li>本拡張機能で扱うユーザーデータは、ユーザーが承認した目的（登録した言葉を含む新着・予約の通知）の
+        ためにのみ使用します。</li>
+      <li>本拡張機能で扱うユーザーデータを、第三者へ<strong>販売・貸与・譲渡しません</strong>。
+        承認された使用法に当てはまらない目的（マーケティング・広告等）でも、第三者へ転送することはありません。</li>
+      <li>本拡張機能で扱うユーザーデータを、<strong>信用力の判断や融資目的</strong>に使用したり、
+        そのような目的のために第三者へ転送することは<strong>一切ありません</strong>。</li>
+    </ol>
+  </div>
+
+  <!-- セキュリティ -->
+  <h2>8. セキュリティ対策</h2>
+  <ul>
+    <li><strong>トークンの隔離</strong>：Chatwork API トークンの読み書きは Service Worker のみが行い、
+      ウェブページ上で動くスクリプトへはトークンそのものを渡しません。
+      設定画面へも「設定済み／未設定」の別しか返しません。</li>
+    <li><strong>入力フォーム保護</strong>：トークン入力欄は <code>type="password"</code> によるマスク表示とし、
+      コピー・切り取り・ドラッグを抑止、<code>autocomplete="off"</code> でブラウザの補完履歴に残しません
+      （貼り付けのみ許可しています）。</li>
+    <li><strong>表示部品の隔離</strong>：お知らせは closed な Shadow DOM 内に描画し、
+      文字はすべて <code>textContent</code> で挿入します（HTML として解釈される経路がありません）。</li>
+    <li><strong>リモートコードを実行しません</strong>：外部から取得したスクリプトの実行、
+      <code>eval</code> 等による動的なコード実行を一切行いません。</li>
+    <li><strong>通信のセキュリティ</strong>：すべての通信は HTTPS で暗号化されます。</li>
+  </ul>
+
+  <!-- 利用者の権利 -->
+  <h2>9. ユーザーの権利（削除請求・開示請求）</h2>
+  <p>本拡張機能が保存するデータは、すべてユーザーの端末内にのみ存在します。
+  拡張機能の設定画面、または Chrome の拡張機能管理画面から、いつでも確認・削除できます。
+  <code>&lt;all_urls&gt;</code> の許可も、設定画面からいつでも取り消せます。
+  開発者側のサーバーにはデータを保持していないため、開発者に対して開示請求できる保存データはありません。</p>
+
+  <!-- 医療安全 -->
+  <h2>10. 医療安全に関する補足</h2>
+  <p>本拡張機能は、連絡の見落としを減らすための補助ツールであり、
+  診断・治療に関する判断や助言を行うものではありません。
+  また、<strong>通知の到達を保証するものではありません</strong>。
+  ブラウザの省電力機能により通知が最大1分程度遅れること、
+  対象の画面を閉じている間は検知できないことなど、構造上の限界があります。
+  緊急性の高い連絡を本拡張機能のみに依存させないでください。</p>
+
+  <!-- 利用者の責任 -->
+  <h2>11. 利用者の責任</h2>
+  <ul>
+    <li>Chatwork API トークンの厳重な管理（紛失・漏洩した場合は速やかに Chatwork の管理画面で再発行してください）</li>
+    <li>診察中の画面に表示されることを踏まえ、Chatwork のチャット名・本文を表示する設定にするかの判断</li>
+    <li>通知に依存しすぎない運用（第10章参照）</li>
+  </ul>
+
+  <!-- ポリシーの変更 -->
+  <h2>12. ポリシーの変更</h2>
+  <p>本プライバシーポリシーは、必要に応じて改定される場合があります。改定があった場合は、本ページの最終更新日を更新します。</p>
+
+  <!-- お問い合わせ -->
+  <h2>13. お問い合わせ</h2>
+  <div class="contact">
+    本プライバシーポリシーに関するご質問は、Chromeウェブストアの拡張機能ページよりお問い合わせください。
+  </div>
+</body>
+</html>
