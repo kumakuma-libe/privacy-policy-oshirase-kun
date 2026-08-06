@@ -1,0 +1,37 @@
+# 静的HTMLをそのまま GitHub Pages へ公開する。
+#
+# 【なぜ Actions 方式か】
+# 従来の方式（legacy / Jekyll ビルド）が 2026-08-06 に失敗し続け、
+# ポリシーを直しても公開ページが古いまま止まっていた。
+# ここは「実装とポリシーが一致していること」が要る場所なので、
+# 中身をそのまま配る Actions 方式に切り替えた。
+name: Deploy static site to Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - id: deployment
+        uses: actions/deploy-pages@v4
